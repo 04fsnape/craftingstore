@@ -10,8 +10,8 @@
     <version>${revision}</version>
 
     <properties>
-        <revision>${craftingstore-version}-RELEASE</revision>
-        <craftingstore-version>2.4.0</craftingstore-version>
+        <craftingstore-version>2.3.1-SNAPSHOT</craftingstore-version>
+        <revision>${craftingstore-version}</revision>
     </properties>
 
     <modules>
