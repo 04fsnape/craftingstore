@@ -5,7 +5,6 @@ import org.spongepowered.api.event.Cancellable;
 import org.spongepowered.api.event.cause.Cause;
 import org.spongepowered.api.event.impl.AbstractEvent;
 
-import java.math.BigDecimal;
 import java.util.UUID;
 
 public class DonationReceivedEvent extends AbstractEvent implements Cancellable {
@@ -19,7 +18,7 @@ public class DonationReceivedEvent extends AbstractEvent implements Cancellable 
     @Deprecated
     private String packageName;
     @Deprecated
-    private BigDecimal packagePrice;
+    private int packagePrice;
     @Deprecated
     private int couponDiscount;
 
@@ -28,7 +27,7 @@ public class DonationReceivedEvent extends AbstractEvent implements Cancellable 
     private boolean cancelled = false;
 
     @Deprecated
-    public DonationReceivedEvent(String command, String username, UUID uuid, String packageName, BigDecimal packagePrice, int couponDiscount) {
+    public DonationReceivedEvent(String command, String username, UUID uuid, String packageName, int packagePrice, int couponDiscount) {
         this.command = command;
         this.username = username;
         this.uuid = uuid;
@@ -68,7 +67,7 @@ public class DonationReceivedEvent extends AbstractEvent implements Cancellable 
     }
 
     @Deprecated
-    public BigDecimal getPackagePrice() {
+    public int getPackagePrice() {
         return packagePrice;
     }
 

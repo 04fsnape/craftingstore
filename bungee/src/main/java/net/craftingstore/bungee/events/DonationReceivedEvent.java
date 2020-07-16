@@ -4,7 +4,6 @@ import net.craftingstore.core.models.donation.Donation;
 import net.md_5.bungee.api.plugin.Cancellable;
 import net.md_5.bungee.api.plugin.Event;
 
-import java.math.BigDecimal;
 import java.util.UUID;
 
 public class DonationReceivedEvent extends Event implements Cancellable {
@@ -18,7 +17,7 @@ public class DonationReceivedEvent extends Event implements Cancellable {
     @Deprecated
     private String packageName;
     @Deprecated
-    private BigDecimal packagePrice;
+    private int packagePrice;
     @Deprecated
     private int couponDiscount;
 
@@ -27,7 +26,7 @@ public class DonationReceivedEvent extends Event implements Cancellable {
     private boolean cancelled = false;
 
     @Deprecated
-    public DonationReceivedEvent(String command, String username, UUID uuid, String packageName, BigDecimal packagePrice, int couponDiscount) {
+    public DonationReceivedEvent(String command, String username, UUID uuid, String packageName, int packagePrice, int couponDiscount) {
         this.command = command;
         this.username = username;
         this.uuid = uuid;
@@ -71,7 +70,7 @@ public class DonationReceivedEvent extends Event implements Cancellable {
     }
 
     @Deprecated
-    public BigDecimal getPackagePrice() {
+    public int getPackagePrice() {
         return packagePrice;
     }
 

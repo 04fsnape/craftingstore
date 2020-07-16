@@ -2,25 +2,29 @@ package net.craftingstore.core.models.api;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.math.BigDecimal;
-
 public class ApiDonation {
-    private int id;
+    @SerializedName("id")
+    private int commandId;
+    private int paymentId;
     private String command;
     @SerializedName("mcName")
     private String username;
     private String uuid;
     private String packageName;
     private boolean requireOnline;
-    private BigDecimal packagePrice;
+    private int packagePriceCents;
     private int couponDiscount;
+
+    public int getCommandId() {
+        return commandId;
+    }
+
+    public int getPaymentId() {
+        return paymentId;
+    }
 
     public String getCommand() {
         return command;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public String getMcName() {
@@ -39,8 +43,8 @@ public class ApiDonation {
         return requireOnline;
     }
 
-    public BigDecimal getPackagePrice() {
-        return packagePrice;
+    public int getPackagePriceCents() {
+        return packagePriceCents;
     }
 
     public int getCouponDiscount() {
